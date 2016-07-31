@@ -17,7 +17,11 @@ case $host_os in
 		CFLAGS="$CFLAGS -I/usr/local/include -I."
 		CXXFLAGS="$CXXFLAGS -I/usr/local/include -I."
 		LDFLAGS="$LDFLAGS -L/usr/local/lib"
-	;;
+    ;;
+    *linux* )
+  		AC_MSG_RESULT([Host is Linux])
+		LDFLAGS="$LDFLAGS -lbsd"
+    ;;
 esac
 
 

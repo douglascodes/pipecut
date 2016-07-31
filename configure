@@ -3845,7 +3845,12 @@ $as_echo "Host is FreeBSD" >&6; }
 		CFLAGS="$CFLAGS -I/usr/local/include -I."
 		CXXFLAGS="$CXXFLAGS -I/usr/local/include -I."
 		LDFLAGS="$LDFLAGS -L/usr/local/lib"
-	;;
+    ;;
+    *linux* )
+  		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Host is Linux" >&5
+$as_echo "Host is Linux" >&6; }
+		LDFLAGS="$LDFLAGS -lbsd"
+    ;;
 esac
 
 
